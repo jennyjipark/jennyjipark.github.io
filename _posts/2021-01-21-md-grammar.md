@@ -1,12 +1,13 @@
 ---
 layout: post
 toc: true
-title: "This post demonstrates post content styles"
+title: "간단한 마크다운 구문"
 categories: junk
 tags: [markdown, css, html]
 author:
   - Bart Simpson
   - Nelson Mandela Muntz
+categories: etc
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit.
@@ -114,3 +115,20 @@ lorem | lorem ipsum | lorem ipsum dolor | lorem ipsum dolor sit
 lorem ipsum dolor sit amet | lorem ipsum dolor sit amet consectetur | lorem ipsum dolor sit amet | lorem ipsum dolor sit
 lorem ipsum dolor | lorem ipsum | lorem | lorem ipsum
 lorem ipsum dolor | lorem ipsum dolor sit | lorem ipsum dolor sit amet | lorem ipsum dolor sit amet consectetur
+
+
+### Source:
+
+```markdown
+- [x] Eating
+- [ ] Walking
+  - [ ] Running
+- [ ] Sleeping
+```
+
+Rendered:
+
+- [x] Eating
+- [ ] Walking
+  - [ ] Running
+- [ ] Sleeping
