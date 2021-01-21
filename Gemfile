@@ -1,11 +1,4 @@
-source "http://rubygems.org"
+# frozen_string_literal: true
 
-gem 'github-pages', group: :jekyll_plugins do
-
-gem 'jekyll-paginate'
-
-gem 'jekyll-sitemap'
-
-gem 'jekyll', '~> 3.6'
-
-end
+source "https://rubygems.org"
+gemspec
