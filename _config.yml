@@ -3,6 +3,7 @@ description: 개발 공부도 하고 일상도 올리는 그런 devlog
 author: Jenny JI Park
 avatar: ./image/01.JPG
 email: jennyjipark@gmail.com
+skin: daylight.scss
 
 plugins:
   - jekyll-seo-tag
@@ -36,8 +37,6 @@ logo: logo.png
 social:
   name: Jenny Ji Park
   links:
-    # - https://twitter.com/ngzhio
-    # - https://www.facebook.com/ngzhio
     - https://github.com/jennyjipark
 google_site_verification: u4WXQl0Eu66rsQo2kRdCNx
 lang: en
