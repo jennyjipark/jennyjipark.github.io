@@ -1,18 +1,32 @@
-<!doctype html>
-<html>
-<head>
-  {% include head.html %}
-</head>
-<body>
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-  <div class="container">
-    {% include header.html %}
+  <head>
+    {% include head.html %}
+  </head>
 
-    <div class="post-container">
-      {{ content }}
+  <body>
+    <div class="site-container">
+      <header class="site-header">
+        {% include header.html %}
+      </header>
+      
+      <div class="site-body wrapper">
+        <aside class="site-sidebar" id="site-sidebar">
+          {% if page.toc %}
+            {% include sidebar-toc.html %}
+          {% else %}
+            {% include sidebar.html %}
+          {% endif %}
+        </aside>
+        <main class="site-main" id="site-main" aria-label="Content">
+          {{ content }}
+          <footer class="site-footer">
+            {% include footer.html %}
+          </footer>
+        </main>
+      </div>
     </div>
-  </div>
+  </body>
 
-{%- include footer.html -%}
-</body>
 </html>

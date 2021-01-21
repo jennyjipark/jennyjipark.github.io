@@ -1,155 +1,188 @@
-# [YAMT - Yet Another Minimal Theme](https://yamt.netlify.app/)
-![](https://badgen.net/rubygems/dt/jekyll-yamt)
-[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/PandaSekh/Jekyll-YAMT/issues)
-![GitHub forks](https://img.shields.io/github/forks/PandaSekh/Jekyll-YAMT?label=Fork%20it%21&style=social)
-## [Live Demo](https://yamt.netlify.app/)
+# Hamilton <!-- omit in toc -->
 
-![Homepage](https://raw.githubusercontent.com/PandaSekh/Jekyll-YAMT/master/assets/img/screenshots/Screenshot.png?raw=true)
+A minimal and beautiful Jekyll theme best for writing and note-taking.
 
-YAMT is a minimal [Jekyll](http://jekyllrb.com) theme focused on simplicity and ease-of-use. It has great modularity, allowing you to easily decide what you actually want on your website.
+The original purpose of this theme is to be a replacement of the default Jekyll theme -- [Minima](https://github.com/jekyll/minima). Hamilton is an enhancement of Minima but still, keep in minimal.
 
-## Contents
+Please check out the [demo](https://ngzhio.github.io/jekyll-theme-hamilton/).
 
-- [Features](#features)
-- [Screenshots](#screenshots)
+| Skins | Displays |
+| ----- | -------- |
+| Daylight | ![screenshot](screenshot.png) |
+| Sunrise/Sunset | ![screenshot](screenshot-sunrise.png) |
+| Midnight | ![screenshot](screenshot-midnight.png) |
+
+## Features <!-- omit in toc -->
+
+- [Jekyll SEO Tag](https://github.com/jekyll/jekyll-seo-tag)
+- [Jekyll Feed](https://github.com/jekyll/jekyll-feed)
+- [Jekyll Sitemap](https://github.com/jekyll/jekyll-sitemap)
+- [Google Analytics](https://analytics.google.com/)
+- [MathJax](https://www.mathjax.org/)
+- [Disqus](https://disqus.com/)
+- [Font Awesome](https://fontawesome.com/)
+- TOC
+- Customizable head
+- Configurable page navigation
+- Customizable styles and skins
+- Archive pages implemented in pure Liquid
+
+## Table of Contents <!-- omit in toc -->
+
 - [Installation](#installation)
-- [Customize](#options)
-  - [Basics](#Basics)
-  - [Typography](#Typography)
-  - [Header](#header)
-  - [Home](#home)
-  - [Post](#post)
-  - [Contact Form](#contact-form)
-- [Development](#development)
-- [Credits](#credits)
+- [Configuration](#configuration)
+  - [Optional Parameters](#optional-parameters)
+- [Archive Pages](#archive-pages)
+- [MathJax](#mathjax)
+- [TOC](#toc)
+- [Customization](#customization)
+  - [Metadata](#metadata)
+  - [Navigation](#navigation)
+  - [Social Media](#social-media)
+  - [Skins](#skins)
+  - [More Customized Styles](#more-customized-styles)
 - [License](#license)
-
-## Features
-
-- Minimal and clean design.
-- Fully modular: activate and load only what you really need.
-- Works great on mobile and smaller screens.
-- Works on Github Pages.
-- Supports [Disqus](https://disqus.com/) comments activated only on button press, if you activate them.
-- [Google Analytics](https://www.google.com/analytics/) support.
-- [Open Graph](https://ogp.me/) and [Twitter Cards](https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started) support to better index the website content on search engines and social networks.
-- [MathJAX](https://www.mathjax.org/) and [LaTeX](https://www.latex-project.org/) optional support. Write beautiful math!
-- [RSS](https://github.com/jekyll/jekyll-feed) support.
-- Beautiful [Syntax Highlight](https://yamt.netlify.app/2020/05/19/special-formatting.html#syntax-highlight). Write some code and show it in a graceful way.
-
-## Screenshots
-
-Mobile:  
-![Mobile](https://raw.githubusercontent.com/PandaSekh/Jekyll-YAMT/master/assets/img/screenshots/Screenshot_mobile.png?raw=true)
-
-Code Highlight:  
-![Code](https://raw.githubusercontent.com/PandaSekh/Jekyll-YAMT/master/assets/img/screenshots/Screenshot_code_highlight.png)
-
-Minimal:  
-![Minimal](https://raw.githubusercontent.com/PandaSekh/Jekyll-YAMT/master/assets/img/screenshots/Screenshot_minimal.png?raw=true)
 
 ## Installation
 
-There are four way to use YAMT: Netlify (suggested, as this theme has a contact module built-in working only on Netlify), Github Pages, as a gem-based theme, by forking this repo or by copying all the files into your directory.
+You can choose one of the following methods to install Hamilton:
 
-### Download the files
-You can [download the files](https://github.com/PandaSekh/Jekyll-YAMT/releases/latest) and add them in your directory to start working.
+- Directly specify the `jekyll-theme-hamilton` gem.
 
-### Netlify
+    1. Add `gem 'jekyll-theme-hamilton'` into your `Gemfile`.
+    2. Add the below lines into your `_config.yml`.
 
-1. [Fork this repo](https://github.com/PandaSekh/Jekyll-YAMT/generate). You can copy only master, set it to private or public and name it however you want.
-2. Go to [Netlify](https://app.netlify.com/), create a New site from Git, choose your repo or all repos, no difference. Back to Netlify, select the recently forked repo.
-3. Owner and branch are good to go. In build command write `bundle exec jekyll build` and publishing directory should be `_site/`.
-4. Deploy. Your site will shortly be available. Under domain settings you can change your subdomain, or add a primary level one. 
+        ```yml
+        plugins:
+          - jekyll-theme-hamilton
+        ```
 
-### Github Pages
+- If your site is hosted on GitHub Pages, you can use [`jekyll-remote-theme`](https://github.com/benbalter/jekyll-remote-theme) to import the master branch of Hamilton.
 
-Github Pages uses the [--safe flag](https://jekyllrb.com/docs/configuration/options/) to build jekyll websites, which disable custom plugins, caching to disk and ignore symbolic links. Because of that, I suggest you to use any other method. Netlify works great with a 5 minute config, so I suggest you use it.
+    1. Add `gem 'jekyll-remote-theme'` into your `Gemfile`.
+    2. Add the below lines into your `_config.yml`.
 
-1. [Fork this repo](https://github.com/PandaSekh/Jekyll-YAMT/generate).
-2. Create a new branch in your repo and call it `gh-pages`.
-3. Publish your website and choose gh-pages as the target branch.
+        ```yml
+        plugins:
+          - jekyll-remote-theme
 
-### Remote theme
+        remote_theme: ngzhio/jekyll-theme-hamilton
+        ```
 
-[Follow these instructions](https://help.github.com/en/github/working-with-github-pages/adding-a-theme-to-your-github-pages-site-using-jekyll).
+## Configuration
 
-### Gem-based theme 
-1. Add this line to your Jekyll site's `Gemfile`:
+After installation, you can run `jekyll serve` to check out your site, but before that, *make sure* the below **required parameters** are configured in your `_config.yml`.
 
-    ```ruby
-    gem "jekyll-yamt"
-    ```
+| Parameters | Types | Specifications |
+|:---------- |:----- |:-------------- |
+| `title`    | string | The site title |
+| `disqus`   | string | The Disqus shortname; Unless you don't want to enable the comments system, you must specify this parameter. It is used in the production environment. |
+| `google_analytics` | string | The Google Analytics tracking ID; It is used in the production environment. |
 
-2. And add this line to your Jekyll site's `_config.yml`:
+### Optional Parameters
 
-    ```yaml
-    theme: jekyll-yamt
-    ```
+| Parameters | Types | Specifications |
+|:---------- |:----- |:-------------- |
+| `author`   | string | The name of the author of the site; It would be showed in the copyright statement. |
+| `avatar`   | string | The avatar of the author of the site. |
+| `email`    | string | The email of the author of the site. |
+| `location` | string | The current living location of the author of the site. |
+| `skin`     | string | The skin name. See more information on the [Customization](#customization) section. |
+| `lang`     | string | The language of the site; The default value is `en`. |
+| `paginate` | int    | The number of posts on each page. |
+| `date_format` | string | The date format; The default value is `%b %-d, %Y`. |
 
-3. And then execute:
+## Archive Pages
 
-    ``` bash
-    $ bundle
-    ```
+Hamilton implements some archive templates in pure Liquid. For example, if you want to create a category archive page, set the below parameters on that page:
 
-4. Or install it yourself as:
-    
-    ``` bash
-    $ gem install jekyll-yamt
-    ```
+```yml
+---
+layout: archive-taxonomies
+type: categories
+---
+```
 
-#### ERROR: There was an error while loading `jekyll-yamt.gemspec`: No such file or directory - git ls-files -z. Bundler cannot continue.
-If you encounter this error when running `bundle install`, please make sure git is installed.
+Or a tag archive page:
 
-## Customize
+```yml
+layout: archive-taxonomies
+type: tags
+```
 
-YAMT is easily customizable. If you don't need a functionality, just deactivate it in `_data/settings.yml`.
-Most of the customizable things are self-explanatory and found in the `_data` folder and in the `_config.yml`.
+Or archive by years:
 
-### Basics
+```yml
+layout: archive-years
+```
 
-Under the `_data` folder there are three files: pages, settings and social.
-In pages you can add other pages that will show up in the nav-
-In social you can add your socials that will show up in the nav. To add a social, find a suitable icon on [FontAwesome](https://fontawesome.com/) and add it's name in the name tag.
-Brand defines Font Awesome's font type (fas is solid, fab is brand).
-Out of the box this theme has support colors for a bunch of social. If your social isn't supported, just add the color in the header.css 
+## MathJax
 
-In `_data/settings.yml` you can activate or deactivate various functions of the theme, like analytics, disqus comments, related posts and so on.
+You can enable MathJax on each post or page, just set `math: true` on that page.
 
-### Typography
-By default YAMT uses the System Font STack, which greatly reduces load times. If you want to use the old Font Stack, in `assets/main.scss` change `typography` to `typography-old`.
+## TOC
 
-### Header
-In `_data/settings.yml` you can choose to hide or show the subtitle, the page navigation or the social icons.
+If you want to show the Table of Contents of a post or page on the left sidebar, just set `toc: true` on that page.
 
-### Home
-In `_data/settings.yml` you can choose to hide or show the posts infos (date and read-time) and the featured image.
+## Customization
 
-### Post
-In `_data/settings.yml` you can choose to hide or show the post infos, categories, related posts and comments.
-Note that by removing categories the Categories Archives will no longer be reachable.
+### Metadata
 
-### Contact Form
-YAMT has a built-in contact form builded using [Netlify](https://app.netlify.com/) free form functionality. To make it work you only need the line `data-netlify="true"` when declaring a form.  
-If you don't want to use Netlify, remove the line `data-netlify="true"`.
+You can create a file `_includes/custom-head.html` in your repository, and add any metadata into that page, e.g. favicons.
 
-## Development
+### Navigation
 
-[Contributions are welcomed and encouraged](https://github.com/PandaSekh/Jekyll-YAMT/issues).
+You can create a file `_data/navigation.yml` to configure links to some pages. For example,
 
-To set up your environment to develop this theme, run `bundle install`.
+```yml
+- title: About
+  url: /about/
+- title: Categories
+  url: /categories/
+- title: Tags
+  url: /tags/
+```
 
-Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
+The navigation bar also supports dropdown submenus:
 
-When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
-To add a custom directory to your theme-gem, please edit the regexp in `yamt.gemspec` accordingly.
+```yml
+- title: About
+  url: /about/
+- title: Categories
+  url: /categories/
+- title: Tags
+  url: /tags/
+- title: More
+  sublinks:
+    - title: FAQ
+      url: /faq/
+    - title: Docs
+      url: /docs/
+```
 
-## Credits
-Theme designed and created by [Alessio Franceschi](https://github.com/PandaSekh/).
-Inspired by [Lagrange by LeNPaul](https://lenpaul.github.io/Lagrange/).  
-Also great help from [this blog](https://blog.webjeda.com/), I've used this even before I created this theme.  
-Images from [Unsplash](https://unsplash.com/).
+### Social Media
+
+You can create a file `_data/social.yml` to configure links to your social media. For example,
+
+```yml
+- title: Twitter
+  url: https://twitter.com/ngzhio
+  icon: fab fa-twitter
+- title: GitHub
+  url: https://github.com/ngzhio/jekyll-theme-hamilton
+  icon: fab fa-github
+```
+
+### Skins
+
+You can select a skin by setting `skin` in `_config.yml`. The built-in skins include `daylight`, `midnight`, `sunrise`, and `sunset`. If you don't specify any skin, Hamilton would dynamically select one in these built-in skins according to different hours in a day.
+
+You can also customize a new skin, for example, a skin called `solarized`. You need to copy [`_sass/hamilton/skins/daylight.scss`](_sass/hamilton/skins/daylight.scss) into your repository and then rename it to `solarized.scss`, and adjust some colors in that file. Finally, specify `skin: solarized` in `_config.yml`.
+
+### More Customized Styles
+
+If you want to create more CSS styles in your site, creating a file `_sass/hamilton/custom-styles.scss`, and putting your code in there, Hamilton would automatically refer to them.
 
 ## License
-The theme is available as open source under the terms of the [MIT License](https://github.com/PandaSekh/Jekyll-YAMT/blob/master/LICENSE.txt).
+
+The theme is available as open source under the terms of the [MIT License](LICENSE.txt).
