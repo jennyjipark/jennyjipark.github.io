@@ -2,14 +2,4 @@
 layout: post
 categories: Daily
 ---
-안녕하세요!!
-
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
-
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+<small>드디어 깃헙으로 블로그를 만들었다. 짝짝!! 정말 머리터지는줄 알았네. 근데 웬걸 마크다운이 뭔가?ㅋㅋㅋㅋ HTML만 알면 되는 줄 알았더니 마크다운도 알아야한대서 유투브로 공부하고있다. 배워야할게 산더미구나~</samll>
