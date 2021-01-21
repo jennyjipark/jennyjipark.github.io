@@ -1,6 +1,13 @@
 /**
  * Site container
  */
+
+ .my {
+   border: 1px solid black;
+   width: 100px;
+   height: 100px;
+ }
+ 
 .site-container {
   height: 100vh;
   width: 100vw;
