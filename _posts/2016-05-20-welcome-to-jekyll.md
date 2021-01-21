@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: Daily
 ---
 안녕하세요!!
 
