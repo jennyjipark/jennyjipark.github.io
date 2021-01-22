@@ -1,13 +1,13 @@
 $text-color:            #111 !default;
 $text-color-light:      #666 !default;
 $background-color:      #fff !default;
-$code-background-color: #2c2c2c !default;
+$code-background-color: #f8f8f8 !default;
 
 $border-color:          #828282 !default;
 $border-color-light:    lighten($border-color, 40%) !default;
 $border-color-dark:     darken($border-color, 25%) !default;
 
-$link-base-color:       #06b3aa !default;
+$link-base-color:       #003be4 !default;
 $link-visited-color:    darken($link-base-color, 15%) !default;
 
 $table-text-color:      lighten($text-color, 18%) !default;
@@ -230,6 +230,5 @@ $subscribe-color:       #b21000 !default;
   color: #bbbbbb;
 }
 .highlight {
-  background-color: #313131;
-  // #f8f8f8
+  background-color: #f8f8f8;
 }
