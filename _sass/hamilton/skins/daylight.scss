@@ -47,8 +47,8 @@ $subscribe-color:       #b21000 !default;
   font-style: italic;
 }
 .highlight .err {
-  color: #a61717;
-  background-color: #e3d2d2;
+  color: #524949;
+  // background-color: #e3d2d2;
 }
 .highlight .gd {
   color: #000000;
@@ -154,7 +154,8 @@ $subscribe-color:       #b21000 !default;
   color: #d14;
 }
 .highlight .sr {
-  color: #009926;
+  // color: #009926;
+  color: #524949;
 }
 .highlight .s1 {
   color: #d14;
