@@ -26,3 +26,25 @@ tags: 자바스크립트, javascript, setTimeout
 ```
 
 ![jsp10_setTimeout_01](/image/jsp10_01.gif)
+
+
+#### 2. 3초 후에 텍스트 창에 현재시간 표시
+
+```html
+<form name="form1">
+  <input type="text" name="txt1" value="3초 후 현재 시간 표시" onfocus="this.value=''">
+</form>
+```
+
+```javascript
+<script>
+  var txt1 = document.form1.txt1;
+  var now = new Date();
+
+  setTimeout(function() {
+    txt1.value = now.toLocaleTimeString();
+  }, 3000);
+</script>
+```
+
+![jsp10_setTimeout_02](/image/jsp10_02.gif)
