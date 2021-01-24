@@ -20,6 +20,7 @@ tags: 자바스크립트, javascript, setTimeout
   <input type="button" name='start' value="시작">
 </form>
 ```
+<br>
 
 <form name='form1'>
   <input type="text" name='txt1' value="시작을 누르면 3초 후 시간 표시" style="width: 230px">
@@ -57,8 +58,10 @@ tags: 자바스크립트, javascript, setTimeout
 </script>
 ```
 - 자바스트립트는 함수를 변수에 넣을 수 있다.
-- 타이머들은 각각 고유번호를 가지고 있다.
+- 타이머들은 각각의 고유번호가 있으며 1부터 시작한다.
 - clearInterval(timer)를 하면 실행했던 타이머가 종료되는 것
 - clearInterval 후 다시 타이머를 호출 할 경우 다른 고유번호를 가지고 있는 타이머가 호출된다.
 
 ![jsp11_ex01](/image/jsp11_01.gif)
+
+<div class="myc1" id="c1"><span>💗 개발 공부하는 블로그입니다. 틀리거나 문제될게 있다면 코멘트 부탁드립니다. 👉👈</span></div>
