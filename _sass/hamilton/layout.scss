@@ -7,6 +7,7 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: $base-font-size * 3 + 6px 1fr;
+  overflow: scroll;
 }
 
 /**
@@ -182,7 +183,7 @@
 .site-body {
   display: grid;
   grid-template-columns: calc(#{$content-width} * 0.24) 1fr;
-  overflow: hidden;
+  // overflow: hidden;
 
   @include media-query($on-medium) {
     grid-template-columns: calc(#{$content-width} * 0.18) 1fr;
