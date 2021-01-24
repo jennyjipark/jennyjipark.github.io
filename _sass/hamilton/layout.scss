@@ -129,7 +129,9 @@
   }
 
   .current-page {
-    text-decoration: line-through;
+    // text-decoration: line-through;
+    color: #B92321;
+    font-weight: bold;
   }
 
   @media screen and (min-width: $on-medium) {
