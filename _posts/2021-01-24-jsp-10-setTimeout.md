@@ -5,7 +5,7 @@ categories: 자바스크립트
 tags: 자바스크립트, javascript, setTimeout
 ---
 
-### setTimeout
+# setTimeout
 
 - 정해진 시간이 되면 코드를 호출하고 종료
 - setTimeout(함수, 시간);
