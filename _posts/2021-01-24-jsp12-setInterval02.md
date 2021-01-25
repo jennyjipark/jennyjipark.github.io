@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "자바스크립트 setInterval로 스톱워치 만들기"
+title: "자바스크립트 setInterval로 타이머 만들기"
 categories: 자바스크립트
 tags: 자바스크립트, javascript, setTimeout
 ---
 
-#### setInterval로 스톱워치 만들기
+#### setInterval로 타이머 만들기
+시작, 종료, 리셋 기능이 있는 타이머랄까...?
 
 
 ```javascript
@@ -48,6 +49,7 @@ tags: 자바스크립트, javascript, setTimeout
 </script>
 ```
 
+![jsp12_ex01](/image/jsp12_01.gif)
 - 타이머가 중복으로 작동할 경우 속도가 빨라진다.
 - 시작 버튼을 중복으로 누를 수 없도록 timer변수에 setInterval을 넣은 점 유의!!
 - **또 시작 버튼을 눌러도 타이머 고유 번호는 1이기 때문에 동작하지 않는다.**
