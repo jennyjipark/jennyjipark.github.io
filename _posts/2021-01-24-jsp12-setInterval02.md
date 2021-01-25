@@ -51,7 +51,7 @@ tags: 자바스크립트, javascript, setTimeout
 
 ![jsp12_ex01](/image/jsp12_01.gif)
 - 타이머가 중복으로 작동할 경우 속도가 빨라진다.
-- 시작 버튼을 중복으로 누를 수 없도록 timer변수에 setInterval을 넣은 점 유의!!
+- 그래서! 시작 버튼을 중복으로 누를 수 없도록 timer변수에 setInterval을 넣은 점 유의!!
 - **또 시작 버튼을 눌러도 타이머 고유 번호는 1이기 때문에 동작하지 않는다.**
 
 <div class="myc1" id="c1"><span>💗 개발 공부하는 블로그입니다. 틀리거나 문제될게 있다면 코멘트 부탁드립니다. 👉👈</span></div>
