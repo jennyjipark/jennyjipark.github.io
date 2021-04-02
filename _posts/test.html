@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name='form1'>
+        <input type="text" name='txt1' value="스톱워치" readonly>
+        <input type="button" name='start' value="시작">
+        <input type="button" name='end' value="종료">
+        <input type="button" name='reset' value="리셋">
+      </form>
+      
+      <script>
+          var txt1 = document.form1.txt1;
+          var start = document.form1.start;
+          var end = document.form1.end;
+          var reset = document.form1.reset;
+      
+          var n = 1;
+          var timer = 0;
+      
+          start.onclick = function() {
+              if(timer == 0) { //시작 버튼 중복으로 누를 수 없도록 제어
+                  timer = setInterval(function() {
+                      txt1.value = n;
+                      n++;
+                      //console.log(timer); 타이머는 고유번호는 1부터 시작
+                  }, 1000);
+              }
+          }//start.onclick
+      
+          end.onclick = function() {
+              clearInterval(timer);
+              timer = 0;
+          }
+      
+          reset.onclick = function() {
+              clearInterval(timer);
+              txt1.value = "";
+              n = 1;
+          }
+      </script>
+</body>
+</html>
